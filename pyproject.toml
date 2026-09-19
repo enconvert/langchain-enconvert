@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langchain-enconvert"
+version = "0.1.0"
+description = "EnConvert document loader for LangChain: perceive URLs or ingest a whole site into Documents, every read scored."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{ name = "EnConvert", email = "support@enconvert.com" }]
+keywords = ["langchain", "enconvert", "rag", "document-loader", "markdown", "web", "ingest"]
+dependencies = [
+    "langchain-core>=0.3",
+    "enconvert>=0.1",
+    "requests>=2.28",
+]
+
+[project.urls]
+Homepage = "https://www.enconvert.com"
+Repository = "https://github.com/enconvert/langchain-enconvert"
+
+[tool.hatch.build.targets.wheel]
+packages = ["langchain_enconvert"]
